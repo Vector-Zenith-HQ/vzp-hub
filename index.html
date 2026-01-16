@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6969440e3fb693862450f234.6969440f3fb693862450f237.TkRfd4e.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-2: #00000033;
+  --medium-purple: #9333ea;
+  --mirage: #161b22;
+  --mischka: #cbd5e1;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 11px;
+  --font-size-s: 10px;
+ 
+  --font-family-orbitron: "Orbitron", Helvetica;
+}
+.orbitron-normal-mischka-11px {
+  color: var(--mischka);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-medium-mirage-10px {
+  color: var(--mirage);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.orbitron-medium-mischka-20px {
+  color: var(--mischka);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+:root {
+}
+
+
+/* screen - vzp-u47u47-neuralu95net */
+
+.vzp-u47u47-neuralu95net {
+  background-color: var(--black);
+  margin: 0px;
+  min-height: 3424px;
+  min-width: 1440px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vz-figma-hero-1-TzKz29 {
+  aspect-ratio: 1.503642;
+  background-color: transparent;
+  height: 957px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.vzp-u47u47-neuralu95net .card_grid_wrapper-TzKz29 {
+  background-color: var(--black);
+  display: grid;
+  gap: 33px 116px;
+  grid-template-columns: repeat(3, fit-content(100%));
+  grid-template-rows: repeat(6, fit-content(100%));
+  height: 1725px;
+  left: 110px;
+  overflow: hidden;
+  position: absolute;
+  top: 999px;
+  width: 1228px;
+}
+
+.vzp-u47u47-neuralu95net .x01_vzp_hub-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-ub2Q1d {
+  height: 260px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-ub2Q1d {
+  height: 54px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-ub2Q1d {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-ub2Q1d {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-dvuMti::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-dvuMti {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-LWmtFH {
+  width: 11.20001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-dvuMti {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-hbYKbo {
+  height: 100%;
+  left: -2448.04%;
+  top: -7642.27%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-kvsqzA {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-vbkidH {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-LoTTvC {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-ub2Q1d {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-PCJzBS {
+  background-blend-mode: lighten;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x02_-google_-cloud-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-xtPKxO {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-xtPKxO {
+  height: 90px;
+  left: calc(50.00% - 147px);
+  top: calc(50.00% - 23px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .scaling-global-compu-bqwxjd {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 46px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-xtPKxO {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-xtPKxO {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-YI8LWC::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-YI8LWC {
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-l5Tusx {
+  width: 11.20001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .development-l5Tusx {
+  cursor: pointer;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-YI8LWC::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-YI8LWC {
+  border: none;
+  border-radius: 100px;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-OLhKae {
+  height: 100%;
+  left: -2448.04%;
+  top: -9473.52%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-ymixbi {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-3BIjMQ {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-5zmOhu {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-xtPKxO {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-Ux5ULt {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x03_-docker_-desktop-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-V6cxr5 {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-V6cxr5 {
+  height: 54px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-V6cxr5 {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-V6cxr5 {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-xA53Wq::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-xA53Wq {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-jaA4Ns {
+  width: 11.20001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-xA53Wq::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-xA53Wq {
+  border: none;
+  border-radius: 100px;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-QhnHhm {
+  height: 100%;
+  left: -2448.04%;
+  top: -11304.77%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-8RR4HM {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-59MjmR {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-oe4YFz {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-V6cxr5 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-acBgF7 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x04_-git-hub_-repo-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-g1qDEq {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-g1qDEq {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .version-control-arch-0qIEfY {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-g1qDEq {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-g1qDEq {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-Iu6VMA::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-Iu6VMA {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-SRN1JM {
+  width: 11.20001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-Iu6VMA {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-eArkvc {
+  height: 100%;
+  left: -2448.04%;
+  top: -13136.02%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-5Gtoig {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-YxYyYL {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-EmzpXh {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-g1qDEq {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-YaJpOq {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x05_-airtable_-base-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-ZhPwBS {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-ZhPwBS {
+  height: 90px;
+  left: calc(50.00% - 140px);
+  top: calc(50.00% - 21px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .data_relational-airt-kH3EaO {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 46px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-ZhPwBS {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-ZhPwBS {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-KoIo1w::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-KoIo1w {
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .categorie-badge-xFx6xF {
+  cursor: pointer;
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-9gZf5c {
+  width: 11.20001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-KoIo1w {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-T5DiMx {
+  height: 100%;
+  left: -2448.04%;
+  top: -14967.27%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-Fr8qRB {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-a6XaAB {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-R9g5Qa {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-ZhPwBS {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-Z3Tx2c {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x06_-notion_-live-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-wgQVdD {
+  height: 260px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-wgQVdD {
+  height: 90px;
+  left: calc(50.00% - 149px);
+  top: calc(50.00% - 19px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .neural_archive-notio-kfAujO {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 46px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-wgQVdD {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-wgQVdD {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-CCkB4O::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-CCkB4O {
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-Ib2tsn {
+  width: 11.20001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-CCkB4O {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-85awNJ {
+  height: 100%;
+  left: -2448.04%;
+  top: -16798.52%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-25r31x {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-O3oitL {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-ke3sqT {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-wgQVdD {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-kewCcL {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x07_-open-ai_-canvas-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-yfuwKH {
+  height: 260px;
+  width: 333px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-yfuwKH {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .heuristic_core-gpt-4-UprfmB {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-yfuwKH {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-yfuwKH {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-jtCwuz::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-jtCwuz {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-K2wCVn {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-jtCwuz {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-yF3nU1 {
+  height: 100%;
+  left: -5215.50%;
+  top: -7642.27%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-Jqcxcu {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-odCm48 {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-X7CSxA {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-yfuwKH {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-EDwx7G {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x08_-gemini_-you-tube-reel-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-P471w7 {
+  height: 261px;
+  width: 333px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-P471w7 {
+  height: 90px;
+  left: calc(50.00% - 149px);
+  top: calc(50.00% - 19px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .multimodal_arch-gemi-Lo8kKT {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 46px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-P471w7 {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-P471w7 {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-wvDZtf::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-wvDZtf {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-3dKnt7 {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-wvDZtf {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-UT1WxP {
+  height: 100%;
+  left: -5215.50%;
+  top: -9473.52%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-xQxCU7 {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-Eg9A7L {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-BJTcut {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-P471w7 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-RGxO8Y {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x09_n8n_workflow-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-hoMom3 {
+  height: 261px;
+  width: 333px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-hoMom3 {
+  height: 90px;
+  left: calc(50.00% - 147px);
+  top: calc(50.00% - 21px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .workflow_orchestrati-fYxL6x {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 46px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-hoMom3 {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-hoMom3 {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-HO1X2E::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-HO1X2E {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-u20kRg {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-HO1X2E {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-sVE5aj {
+  height: 100%;
+  left: -5215.50%;
+  top: -11304.77%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-1YOD8l {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-7oZ52o {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-a60xuH {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-hoMom3 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-Ppal0D {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x10_makecom-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-482lKi {
+  height: 261px;
+  width: 333px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-482lKi {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .api_integrator-make-UxRbBV {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-482lKi {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-482lKi {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-SbfCIy::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-SbfCIy {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-gqd8xJ {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-SbfCIy {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-j8HfJI {
+  height: 100%;
+  left: -5215.50%;
+  top: -13136.02%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-9axhLm {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-6X8pYp {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-SHaxMs {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-482lKi {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-YOTY9t {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x11_vs_-code-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-Cpd8jF {
+  height: 261px;
+  width: 333px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-Cpd8jF {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .command_line-vs_code-AstS8M {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-Cpd8jF {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-Cpd8jF {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-A9E2yx::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-A9E2yx {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-N3giRx {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-A9E2yx {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-rXkglT {
+  height: 100%;
+  left: -5215.50%;
+  top: -14967.27%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-f3aO2r {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-AjxHsP {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-Si91s9 {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-Cpd8jF {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-bHG0dV {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x12_-figma_hud-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-cXFhfB {
+  height: 260px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-cXFhfB {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .figma-high-fidelity-zb7KKm {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-cXFhfB {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-cXFhfB {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-qXxctg::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-qXxctg {
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-nhBOpp {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-qXxctg {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-y9AT7h {
+  height: 100%;
+  left: -7982.97%;
+  top: -7642.27%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-aKebaA {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-KzdcXT {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-yAfS7l {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-cXFhfB {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-rAGHxo {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x13_-canva-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-WNmmQQ {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-WNmmQQ {
+  height: 27.69%;
+  left: 5.48%;
+  top: 47.69%;
+  width: 90.49%;
+}
+
+.vzp-u47u47-neuralu95net .canva-studio-rapid-a-h4xVe2 {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 99.33%;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-WNmmQQ {
+  height: 0px;
+  left: 0px;
+  top: 78.20%;
+  width: 99.84%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-WNmmQQ {
+  left: 25px;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-IilTXH::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-IilTXH {
+  left: 0px;
+}
+
+.vzp-u47u47-neuralu95net .categorie-badge-InxzC4 {
+  cursor: pointer;
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-uRdMCu {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-IilTXH {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: 261px;
+  top: 2px;
+}
+
+.vzp-u47u47-neuralu95net .vector-PevYOq {
+  height: 100%;
+  left: -7982.97%;
+  top: -9473.52%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-FX7Lfr {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-a0Q7Ya {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-9rN1xp {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-WNmmQQ {
+  left: 0px;
+  top: 0px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-KTfoPm {
+  left: 0px;
+  top: 0px;
+}
+
+.vzp-u47u47-neuralu95net .x14_-medium-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-xbx7T4 {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-xbx7T4 {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 6px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .medium-voice-strateg-cifvzY {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-xbx7T4 {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-xbx7T4 {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-7PYLfQ::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-7PYLfQ {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-xvH7Mo {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-7PYLfQ {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-YTnVJz {
+  height: 100%;
+  left: -7982.97%;
+  top: -11304.77%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-tU0BH8 {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-omdGZD {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-qGlzCX {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-xbx7T4 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-VL8cQa {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x15_-contra-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-PHi9Zp {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-PHi9Zp {
+  height: 72px;
+  left: calc(50.00% - 149px);
+  top: calc(50.00% - 16px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .contra-professional-jl7THj {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-PHi9Zp {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-PHi9Zp {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-5dJlWH::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-5dJlWH {
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .categorie-badge-y3gi32 {
+  cursor: pointer;
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-JqPUnM {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-5dJlWH {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-LRXsCI {
+  height: 100%;
+  left: -7982.97%;
+  top: -13136.02%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-zvZuyc {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-KH5ymn {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-50Xtth {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-PHi9Zp {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-tTfzV8 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .x16_-eraserio-Z3wPWm {
+  background-color: transparent;
+  box-shadow: 0px 0px 18px #9333ea26 , inset 0px 1px 2px #ffffff26;
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+  height: 260px;
+  position: relative;
+  width: 332.1776123046875px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730-8EOkH6 {
+  height: 261px;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595-8EOkH6 {
+  height: 72px;
+  left: calc(50.00% - 148px);
+  top: calc(50.00% - 14px);
+  width: 301px;
+}
+
+.vzp-u47u47-neuralu95net .eraser-logic-archite-eCJd3f {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 37px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector-768-8EOkH6 {
+  height: 1px;
+  left: calc(50.00% - 166px);
+  top: calc(50.00% + 73px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722-8EOkH6 {
+  left: calc(50.00% - 141px);
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-XxckMh::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  content: '';
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611-XxckMh {
+  cursor: pointer;
+  left: calc(50.00% - 139px);
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon-Rzbg1x {
+  width: 11.199951171875px;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon-XxckMh {
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  left: calc(50.00% + 123px);
+  top: calc(50.00% - 8px);
+}
+
+.vzp-u47u47-neuralu95net .vector-6Yl4e2 {
+  height: 100%;
+  left: -7982.97%;
+  top: -14967.27%;
+  width: 100%;
+}
+
+.vzp-u47u47-neuralu95net .vector-47N5u0 {
+  height: 100.00%;
+  left: 41.27%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-DdNxMT {
+  height: 100.00%;
+  left: 82.53%;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .vector-38GkNh {
+  height: 100.00%;
+  left: 0px;
+  top: 0px;
+  width: 17.47%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725-8EOkH6 {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402-WYa2RO {
+  left: calc(50.00% - 166px);
+  top: calc(50.00% - 50px);
+}
+
+.vzp-u47u47-neuralu95net .vzp-logo-TzKz29 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 396.610107421875px;
+  left: 559px;
+  position: absolute;
+  top: 2464px;
+}
+
+.vzp-u47u47-neuralu95net .image-1-BjCncZ {
+  aspect-ratio: 1.083333;
+  background-color: transparent;
+  height: 720px;
+  position: relative;
+  width: 780.0001220703125px;
+}
+
+.vzp-u47u47-neuralu95net .header_-core_-systems-TzKz29 {
+  background-color: transparent;
+  height: 14px;
+  left: 186px;
+  position: absolute;
+  top: 937px;
+  width: 132px;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004457-xFOjBZ {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  height: 14px;
+  left: 1px;
+  top: 1px;
+  transform: rotate(0.17deg);
+  width: 132px;
+}
+
+.vzp-u47u47-neuralu95net .core-systems-32Tutu {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  margin-right: -56.09px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 187.8556671142578px;
+}
+
+.vzp-u47u47-neuralu95net .header_-intell_-layer-TzKz29 {
+  background-color: transparent;
+  height: 22px;
+  left: 609px;
+  position: absolute;
+  top: 867px;
+  width: 156px;
+}
+
+.vzp-u47u47-neuralu95net .header_-intell_2-yO3a1i {
+  background-color: transparent;
+  height: 22px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 156px;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004457-Y3haqJ {
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  width: 156px;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000005714-OwSZcU {
+  background-color: transparent;
+  height: 14px;
+  left: -12px;
+  position: relative;
+  top: 69px;
+  width: 253px;
+}
+
+.vzp-u47u47-neuralu95net .intelligence-layer-TqQGnn {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vzp-u47u47-neuralu95net .header_-synth_-deploy-TzKz29 {
+  background-color: transparent;
+  height: 14px;
+  left: 996px;
+  position: absolute;
+  top: 936px;
+  width: 352px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005723-olnidt {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 352px;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004457-QO6F5H {
+  align-items: center;
+  display: inline-flex;
+  gap: 4px;
+  left: 0px;
+  top: 0px;
+}
+
+.vzp-u47u47-neuralu95net .sysnthesis-deployment-OQjiWy {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 352px;
+}
+
+.vzp-u47u47-neuralu95net .categorie-badge {
+  align-items: flex-start;
+  background-color: var(--medium-purple);
+  border: 0.6000000238418579px solid;
+  border-color: var(--medium-purple);
+  border-radius: 100px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 13px;
+  justify-content: center;
+  padding: 3px 6px;
+  position: relative;
+}
+
+.vzp-u47u47-neuralu95net .content_-fixed {
+  background-color: transparent;
+  height: 260px;
+  left: calc(50.00% - 166px);
+  position: relative;
+  top: calc(50.00% - 130px);
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .custome-icon-development-icon {
+  background-color: transparent;
+  height: 10px;
+  margin-left: -0.60px;
+  position: relative;
+}
+
+.vzp-u47u47-neuralu95net .development {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.vzp-u47u47-neuralu95net .dots-three-icon {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004457 {
+  background-color: transparent;
+  position: relative;
+}
+
+.vzp-u47u47-neuralu95net .frame-1000004611 {
+  align-items: flex-start;
+  background: linear-gradient(135deg, rgba(147, 51, 234, 1) 0%, rgba(147, 51, 234, 0.2) 100%);
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  display: inline-flex;
+  gap: 8px;
+  opacity: 0.66;
+  position: absolute;
+  top: calc(50.00% - 10px);
+}
+
+.vzp-u47u47-neuralu95net .frame-39510 {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.vzp-u47u47-neuralu95net .group-1000004595 {
+  background-color: transparent;
+  box-shadow: inset 0px 1px 2px #ffffff26;
+  position: absolute;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005718 {
+  background-color: transparent;
+  height: 15.27%;
+  left: 6.30%;
+  position: absolute;
+  top: 42.37%;
+  width: 87.50%;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005722 {
+  background-color: transparent;
+  box-shadow: inset 0px 1px 2px #ffffff26;
+  height: 20px;
+  position: absolute;
+  top: calc(50.00% + 92px);
+  width: 278px;
+}
+
+.vzp-u47u47-neuralu95net .group-1000005725 {
+  background-color: transparent;
+  box-shadow: inset 0px 1px 2px #ffffff26;
+  height: 100px;
+  opacity: 0.75;
+  position: absolute;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-5402 {
+  background-color: transparent;
+  height: 100px;
+  position: absolute;
+  width: 332px;
+}
+
+.vzp-u47u47-neuralu95net .rectangle-730 {
+  background-color: transparent;
+  left: calc(50.00% - 166px);
+  position: absolute;
+  top: calc(50.00% - 130px);
+}
+
+.vzp-u47u47-neuralu95net .unified-command-inte {
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  height: auto;
+  left: calc(50.00% - 151px);
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: calc(50.00% - 28px);
+  width: 299px;
+}
+
+.vzp-u47u47-neuralu95net .vector {
+  background-color: transparent;
+  position: absolute;
+}
+
+.vzp-u47u47-neuralu95net .vector-768 {
+  background-color: transparent;
+  position: absolute;
+}
+</style></head><body style="margin: 0;background: #000000;"><input type="hidden" id="anPageName" name="page" value="vzp-u47u47-neuralu95net"><div class="vzp-u47u47-neuralu95net screen " data-id="251:23279"><img class="vz-figma-hero-1-TzKz29" data-id="251:23280" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vzfigmahero-1.png" alt="VZFigmaHero 1"><div class="card_grid_wrapper-TzKz29" data-id="251:23281"><div class="x01_vzp_hub-Z3wPWm" data-id="251:23282"><div class="content_-fixed" data-id="251:23283"><img class="rectangle-730-ub2Q1d rectangle-730" data-id="251:23284" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730.svg" alt="Rectangle 730"><div class="group-1000004595-ub2Q1d group-1000004595" data-id="251:23285"><p class="unified-command-inte orbitron-normal-mischka-11px" data-id="251:23286"> Unified command interface, VZP architectural logic, and core data pipeline. Synchronizing cross-platform toolsets for maximum output..</p></div><img class="vector-768-ub2Q1d vector-768" data-id="251:23287" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768.svg" alt="Vector 768"><div class="group-1000005722-ub2Q1d group-1000005722" data-id="251:23288"><a href="rebrand.ly/VectorZenith" target="_blank"><div class="frame-1000004611-dvuMti frame-1000004611" data-id="251:23289"><div class="categorie-badge" data-id="251:23290"><div class="frame-39510" data-id="I251:23290;4065:38119"><img class="custome-icon-development-icon-LWmtFH custome-icon-development-icon" data-id="I251:23290;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23290;4065:38121">PROJECT INTERFACE</div></div></div></div></a><div class="dots-three-icon-dvuMti dots-three-icon" data-id="251:23293"><img class="vector-hbYKbo vector" data-id="I251:23293;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23293;4288:125160"><img class="vector-kvsqzA vector" data-id="I251:23293;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-vbkidH vector" data-id="I251:23293;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-LoTTvC vector" data-id="I251:23293;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-ub2Q1d group-1000005725" data-id="251:23294"><img class="rectangle-5402-PCJzBS rectangle-5402" data-id="251:23295" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402@2x.png" alt="Rectangle 5402"></div></div></div><div class="x02_-google_-cloud-Z3wPWm" data-id="251:23296"><div class="content_-fixed" data-id="251:23297"><img class="rectangle-730-xtPKxO rectangle-730" data-id="251:23298" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-1.svg" alt="Rectangle 730"><div class="group-1000004595-xtPKxO group-1000004595" data-id="251:23299"><p class="scaling-global-compu-bqwxjd orbitron-normal-mischka-11px" data-id="251:23300">Scaling global compute architecture. Orchestrating high-availability server instances and multi-regional data pipelines. Sustaining the raw processing load for the VZP neural net. STATUS: OVERLOAD_PROTECTED</p></div><img class="vector-768-xtPKxO vector-768" data-id="251:23301" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-1.svg" alt="Vector 768"><div class="group-1000005722-xtPKxO group-1000005722" data-id="251:23302"><div class="frame-1000004611-YI8LWC frame-1000004611" data-id="251:23303"><div class="categorie-badge" data-id="251:23304"><div class="frame-39510" data-id="I251:23304;4065:38119"><img class="custome-icon-development-icon-l5Tusx custome-icon-development-icon" data-id="I251:23304;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon.svg" alt="Custome Icon/Development Icon"><a href="https://youtu.be/ByaMZNx2gec?si=4kRYIMbKE1hcy0hH" target="_blank"><div class="development-l5Tusx development orbitron-medium-mirage-10px" data-id="I251:23304;4065:38121">PROJECT INTERFACE</div></a></div></div></div><div class="dots-three-icon-YI8LWC dots-three-icon" data-id="251:23307"><img class="vector-OLhKae vector" data-id="I251:23307;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23307;4288:125160"><img class="vector-ymixbi vector" data-id="I251:23307;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-3BIjMQ vector" data-id="I251:23307;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-5zmOhu vector" data-id="I251:23307;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-xtPKxO group-1000005725" data-id="251:23308"><img class="rectangle-5402-Ux5ULt rectangle-5402" data-id="251:23309" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-1@2x.png" alt="Rectangle 5402"></div></div></div><div class="x03_-docker_-desktop-Z3wPWm" data-id="251:23310"><div class="content_-fixed" data-id="251:23311"><img class="rectangle-730-V6cxr5 rectangle-730" data-id="251:23312" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-2.svg" alt="Rectangle 730"><div class="group-1000004595-V6cxr5 group-1000004595" data-id="251:23313"><p class="unified-command-inte orbitron-normal-mischka-11px" data-id="251:23314"> Unified command interface, VZP architectural logic, and core data pipeline. Synchronizing cross-platform toolsets for maximum output..</p></div><img class="vector-768-V6cxr5 vector-768" data-id="251:23315" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-2.svg" alt="Vector 768"><div class="group-1000005722-V6cxr5 group-1000005722" data-id="251:23316"><a href="https://rebrand.ly/VectorZenith" target="_blank"><div class="frame-1000004611-xA53Wq frame-1000004611" data-id="251:23317"><div class="categorie-badge" data-id="251:23318"><div class="frame-39510" data-id="I251:23318;4065:38119"><img class="custome-icon-development-icon-jaA4Ns custome-icon-development-icon" data-id="I251:23318;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23318;4065:38121">PROJECT INTERFACE</div></div></div></div></a><div class="dots-three-icon-xA53Wq dots-three-icon" data-id="251:23321"><img class="vector-QhnHhm vector" data-id="I251:23321;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23321;4288:125160"><img class="vector-8RR4HM vector" data-id="I251:23321;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-59MjmR vector" data-id="I251:23321;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-oe4YFz vector" data-id="I251:23321;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-V6cxr5 group-1000005725" data-id="251:23322"><img class="rectangle-5402-acBgF7 rectangle-5402" data-id="251:23323" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-2@2x.png" alt="Rectangle 5402"></div></div></div><div class="x04_-git-hub_-repo-Z3wPWm" data-id="251:23324"><div class="content_-fixed" data-id="251:23325"><img class="rectangle-730-g1qDEq rectangle-730" data-id="251:23326" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-3.svg" alt="Rectangle 730"><div class="group-1000004595-g1qDEq group-1000004595" data-id="251:23327"><p class="version-control-arch-0qIEfY orbitron-normal-mischka-11px" data-id="251:23328">Version control architecture. Committing core logic to the immutable ledger. Synchronizing development branches with the VZP master stream..</p></div><img class="vector-768-g1qDEq vector-768" data-id="251:23329" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-3.svg" alt="Vector 768"><div class="group-1000005722-g1qDEq group-1000005722" data-id="251:23330"><a href="https://vector-zenith-hq.github.io/" target="_blank"><div class="frame-1000004611-Iu6VMA frame-1000004611" data-id="251:23331"><div class="categorie-badge" data-id="251:23332"><div class="frame-39510" data-id="I251:23332;4065:38119"><img class="custome-icon-development-icon-SRN1JM custome-icon-development-icon" data-id="I251:23332;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-3.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23332;4065:38121">PROJECT INTERFACE</div></div></div></div></a><div class="dots-three-icon-Iu6VMA dots-three-icon" data-id="251:23335"><img class="vector-eArkvc vector" data-id="I251:23335;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23335;4288:125160"><img class="vector-5Gtoig vector" data-id="I251:23335;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-YxYyYL vector" data-id="I251:23335;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-EmzpXh vector" data-id="I251:23335;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-g1qDEq group-1000005725" data-id="251:23336"><img class="rectangle-5402-YaJpOq rectangle-5402" data-id="251:23337" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-3@2x.png" alt="Rectangle 5402"></div></div></div><div class="x05_-airtable_-base-Z3wPWm" data-id="251:23338"><div class="content_-fixed" data-id="251:23339"><img class="rectangle-730-ZhPwBS rectangle-730" data-id="251:23340" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-4.svg" alt="Rectangle 730"><div class="group-1000004595-ZhPwBS group-1000004595" data-id="251:23341"><p class="data_relational-airt-kH3EaO orbitron-normal-mischka-11px" data-id="251:23342"> DATA_RELATIONAL // AIRTABLE&nbsp;&nbsp; Managing the master schema. Cross-referencing tool metadata with operational logs. The central source of truth for the VZP relational architecture.</p></div><img class="vector-768-ZhPwBS vector-768" data-id="251:23343" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-4.svg" alt="Vector 768"><div class="group-1000005722-ZhPwBS group-1000005722" data-id="251:23344"><div class="frame-1000004611-KoIo1w frame-1000004611" data-id="251:23345"><a href="https://brave-quilt-a36.notion.site/Vector-Zenith-Stack-V1-0-2e481ac68b9880aca189c2eb5861e073?source=copy_link" target="_blank"><div class="categorie-badge-xFx6xF categorie-badge" data-id="251:23346"><div class="frame-39510" data-id="I251:23346;4065:38119"><img class="custome-icon-development-icon-9gZf5c custome-icon-development-icon" data-id="I251:23346;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-3.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23346;4065:38121">QUERY_DATABASE</div></div></div></a></div><div class="dots-three-icon-KoIo1w dots-three-icon" data-id="251:23349"><img class="vector-T5DiMx vector" data-id="I251:23349;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23349;4288:125160"><img class="vector-Fr8qRB vector" data-id="I251:23349;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-a6XaAB vector" data-id="I251:23349;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-R9g5Qa vector" data-id="I251:23349;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-ZhPwBS group-1000005725" data-id="251:23350"><img class="rectangle-5402-Z3Tx2c rectangle-5402" data-id="251:23351" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-4@2x.png" alt="Rectangle 5402"></div></div></div><div class="x06_-notion_-live-Z3wPWm" data-id="251:23352"><div class="content_-fixed" data-id="251:23353"><img class="rectangle-730-wgQVdD rectangle-730" data-id="251:23354" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-5.svg" alt="Rectangle 730"><div class="group-1000004595-wgQVdD group-1000004595" data-id="251:23355"><p class="neural_archive-notio-kfAujO orbitron-normal-mischka-11px" data-id="251:23356">NEURAL_ARCHIVE // NOTION&nbsp;&nbsp;Documenting the master directive. Mapping procedural workflows and VZP operational standardizations. The cognitive repository for long-form strategy and internal logic.</p></div><img class="vector-768-wgQVdD vector-768" data-id="251:23357" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-5.svg" alt="Vector 768"><div class="group-1000005722-wgQVdD group-1000005722" data-id="251:23358"><div class="frame-1000004611-CCkB4O frame-1000004611" data-id="251:23359"><div class="categorie-badge" data-id="251:23360"><div class="frame-39510" data-id="I251:23360;4065:38119"><img class="custome-icon-development-icon-Ib2tsn custome-icon-development-icon" data-id="I251:23360;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-3.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23360;4065:38121">READ_DIRECTIVE</div></div></div></div><div class="dots-three-icon-CCkB4O dots-three-icon" data-id="251:23363"><img class="vector-85awNJ vector" data-id="I251:23363;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23363;4288:125160"><img class="vector-25r31x vector" data-id="I251:23363;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-O3oitL vector" data-id="I251:23363;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-ke3sqT vector" data-id="I251:23363;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-wgQVdD group-1000005725" data-id="251:23364"><img class="rectangle-5402-kewCcL rectangle-5402" data-id="251:23365" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-5@2x.png" alt="Rectangle 5402"></div></div></div><div class="x07_-open-ai_-canvas-Z3wPWm" data-id="251:23366"><div class="content_-fixed" data-id="251:23367"><img class="rectangle-730-yfuwKH rectangle-730" data-id="251:23368" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-6.svg" alt="Rectangle 730"><div class="group-1000004595-yfuwKH group-1000004595" data-id="251:23369"><p class="heuristic_core-gpt-4-UprfmB orbitron-normal-mischka-11px" data-id="251:23370">HEURISTIC_CORE // GPT-4O&nbsp;&nbsp;Primary language processing unit. Generating high-fidelity logic structures and creative synthesis. Operating as the lead linguistic architect for VZP operations.</p></div><img class="vector-768-yfuwKH vector-768" data-id="251:23371" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-6.svg" alt="Vector 768"><div class="group-1000005722-yfuwKH group-1000005722" data-id="251:23372"><a href="https://chatgpt.com/s/m_6961ec40b3048191a6bbc91f686eaa41" target="_blank"><div class="frame-1000004611-jtCwuz frame-1000004611" data-id="251:23373"><div class="categorie-badge" data-id="251:23374"><div class="frame-39510" data-id="I251:23374;4065:38119"><img class="custome-icon-development-icon-K2wCVn custome-icon-development-icon" data-id="I251:23374;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-6.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23374;4065:38121">PROJECT INTERFACE</div></div></div></div></a><div class="dots-three-icon-jtCwuz dots-three-icon" data-id="251:23377"><img class="vector-yF3nU1 vector" data-id="I251:23377;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23377;4288:125160"><img class="vector-Jqcxcu vector" data-id="I251:23377;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-odCm48 vector" data-id="I251:23377;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-X7CSxA vector" data-id="I251:23377;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-yfuwKH group-1000005725" data-id="251:23378"><img class="rectangle-5402-EDwx7G rectangle-5402" data-id="251:23379" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-6@2x.png" alt="Rectangle 5402"></div></div></div><div class="x08_-gemini_-you-tube-reel-Z3wPWm" data-id="251:23380"><div class="content_-fixed" data-id="251:23381"><img class="rectangle-730-P471w7 rectangle-730" data-id="251:23382" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-7.svg" alt="Rectangle 730"><div class="group-1000004595-P471w7 group-1000004595" data-id="251:23383"><p class="multimodal_arch-gemi-Lo8kKT orbitron-normal-mischka-11px" data-id="251:23384">MULTIMODAL_ARCH // GEMINI&nbsp;&nbsp;Deep integration with the Google ecosystem. Processing massive context windows for cross-platform data analysis. Real-time vision and audio synthesis engine.</p></div><img class="vector-768-P471w7 vector-768" data-id="251:23385" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-7.svg" alt="Vector 768"><div class="group-1000005722-P471w7 group-1000005722" data-id="251:23386"><a href="https://youtu.be/ByaMZNx2gec?si=uUX4rL02_NXYHJOG" target="_blank"><div class="frame-1000004611-wvDZtf frame-1000004611" data-id="251:23387"><div class="categorie-badge" data-id="251:23388"><div class="frame-39510" data-id="I251:23388;4065:38119"><img class="custome-icon-development-icon-3dKnt7 custome-icon-development-icon" data-id="I251:23388;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-6.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23388;4065:38121">ACCESS_MODALITY</div></div></div></div></a><div class="dots-three-icon-wvDZtf dots-three-icon" data-id="251:23391"><img class="vector-UT1WxP vector" data-id="I251:23391;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23391;4288:125160"><img class="vector-xQxCU7 vector" data-id="I251:23391;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-Eg9A7L vector" data-id="I251:23391;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-BJTcut vector" data-id="I251:23391;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-P471w7 group-1000005725" data-id="251:23392"><img class="rectangle-5402-RGxO8Y rectangle-5402" data-id="251:23393" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-7@2x.png" alt="Rectangle 5402"></div></div></div><div class="x09_n8n_workflow-Z3wPWm" data-id="251:23394"><div class="content_-fixed" data-id="251:23395"><img class="rectangle-730-hoMom3 rectangle-730" data-id="251:23396" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-8.svg" alt="Rectangle 730"><div class="group-1000004595-hoMom3 group-1000004595" data-id="251:23397"><p class="workflow_orchestrati-fYxL6x orbitron-normal-mischka-11px" data-id="251:23398">WORKFLOW_ORCHESTRATION // n8n&nbsp;&nbsp;Low-code node architecture for complex automation. Mapping logic paths between the infrastructure and the intelligence layers. Executing high-frequency data triggers.</p></div><img class="vector-768-hoMom3 vector-768" data-id="251:23399" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-8.svg" alt="Vector 768"><div class="group-1000005722-hoMom3 group-1000005722" data-id="251:23400"><a href="https://vector-zenith-hq.github.io/fss-dashboard/" target="_blank"><div class="frame-1000004611-HO1X2E frame-1000004611" data-id="251:23401"><div class="categorie-badge" data-id="251:23402"><div class="frame-39510" data-id="I251:23402;4065:38119"><img class="custome-icon-development-icon-u20kRg custome-icon-development-icon" data-id="I251:23402;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-6.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23402;4065:38121">TRIGGER_NODE</div></div></div></div></a><div class="dots-three-icon-HO1X2E dots-three-icon" data-id="251:23405"><img class="vector-sVE5aj vector" data-id="I251:23405;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23405;4288:125160"><img class="vector-1YOD8l vector" data-id="I251:23405;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-7oZ52o vector" data-id="I251:23405;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-a60xuH vector" data-id="I251:23405;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-hoMom3 group-1000005725" data-id="251:23406"><img class="rectangle-5402-Ppal0D rectangle-5402" data-id="251:23407" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-8@2x.png" alt="Rectangle 5402"></div></div></div><div class="x10_makecom-Z3wPWm" data-id="251:23408"><div class="content_-fixed" data-id="251:23409"><img class="rectangle-730-482lKi rectangle-730" data-id="251:23410" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-9.svg" alt="Rectangle 730"><div class="group-1000004595-482lKi group-1000004595" data-id="251:23411"><p class="api_integrator-make-UxRbBV orbitron-normal-mischka-11px" data-id="251:23412">API_INTEGRATOR // MAKE&nbsp;&nbsp;Visualizing complex API relationships. Bridging data gaps with multi-step scenarios. Orchestrating the silent synchronization of the VZP ecosystem.</p></div><img class="vector-768-482lKi vector-768" data-id="251:23413" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-9.svg" alt="Vector 768"><div class="group-1000005722-482lKi group-1000005722" data-id="251:23414"><a href="https://us2.make.com/public/shared-scenario/qRuLA3XKAoJ/integration-google-sheets-airtable" target="_blank"><div class="frame-1000004611-SbfCIy frame-1000004611" data-id="251:23415"><div class="categorie-badge" data-id="251:23416"><div class="frame-39510" data-id="I251:23416;4065:38119"><img class="custome-icon-development-icon-gqd8xJ custome-icon-development-icon" data-id="I251:23416;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-7.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23416;4065:38121">EXECUTE_SCENARIO</div></div></div></div></a><div class="dots-three-icon-SbfCIy dots-three-icon" data-id="251:23419"><img class="vector-j8HfJI vector" data-id="I251:23419;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23419;4288:125160"><img class="vector-9axhLm vector" data-id="I251:23419;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-6X8pYp vector" data-id="I251:23419;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-SHaxMs vector" data-id="I251:23419;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-482lKi group-1000005725" data-id="251:23420"><img class="rectangle-5402-YOTY9t rectangle-5402" data-id="251:23421" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-9@2x.png" alt="Rectangle 5402"></div></div></div><div class="x11_vs_-code-Z3wPWm" data-id="251:23422"><div class="content_-fixed" data-id="251:23423"><img class="rectangle-730-Cpd8jF rectangle-730" data-id="251:23424" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-10.svg" alt="Rectangle 730"><div class="group-1000004595-Cpd8jF group-1000004595" data-id="251:23425"><p class="command_line-vs_code-AstS8M orbitron-normal-mischka-11px" data-id="251:23426">COMMAND_LINE // VS_CODE&nbsp;&nbsp;The primary development environment. Writing the custom logic and scripts that power the VZP framework. Where the architecture becomes code.</p></div><img class="vector-768-Cpd8jF vector-768" data-id="251:23427" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-10.svg" alt="Vector 768"><div class="group-1000005722-Cpd8jF group-1000005722" data-id="251:23428"><a href="https://github.dev/Vector-Zenith-HQ/Vector-Zenith-HQ.github.io" target="_blank"><div class="frame-1000004611-A9E2yx frame-1000004611" data-id="251:23429"><div class="categorie-badge" data-id="251:23430"><div class="frame-39510" data-id="I251:23430;4065:38119"><img class="custome-icon-development-icon-N3giRx custome-icon-development-icon" data-id="I251:23430;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-7.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23430;4065:38121">OPEN_TERMINAL</div></div></div></div></a><div class="dots-three-icon-A9E2yx dots-three-icon" data-id="251:23433"><img class="vector-rXkglT vector" data-id="I251:23433;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23433;4288:125160"><img class="vector-f3aO2r vector" data-id="I251:23433;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-AjxHsP vector" data-id="I251:23433;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-Si91s9 vector" data-id="I251:23433;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-Cpd8jF group-1000005725" data-id="251:23434"><img class="rectangle-5402-bHG0dV rectangle-5402" data-id="251:23435" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-10@2x.png" alt="Rectangle 5402"></div></div></div><div class="x12_-figma_hud-Z3wPWm" data-id="251:23436"><div class="content_-fixed" data-id="251:23437"><img class="rectangle-730-cXFhfB rectangle-730" data-id="251:23438" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-11.svg" alt="Rectangle 730"><div class="group-1000004595-cXFhfB group-1000004595" data-id="251:23439"><p class="figma-high-fidelity-zb7KKm orbitron-normal-mischka-11px" data-id="251:23440">FIGMA // High-fidelity UI/UX orchestration&nbsp;&nbsp;Constructing the visual logic and component architecture for the VZP ecosystem. Mapping the human-to-system interface.</p></div><img class="vector-768-cXFhfB vector-768" data-id="251:23441" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-11.svg" alt="Vector 768"><div class="group-1000005722-cXFhfB group-1000005722" data-id="251:23442"><div class="frame-1000004611-qXxctg frame-1000004611" data-id="251:23443"><div class="categorie-badge" data-id="251:23444"><div class="frame-39510" data-id="I251:23444;4065:38119"><img class="custome-icon-development-icon-nhBOpp custome-icon-development-icon" data-id="I251:23444;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-6.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23444;4065:38121">PROJECT INTERFACE</div></div></div></div><div class="dots-three-icon-qXxctg dots-three-icon" data-id="251:23447"><img class="vector-y9AT7h vector" data-id="I251:23447;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23447;4288:125160"><img class="vector-aKebaA vector" data-id="I251:23447;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-KzdcXT vector" data-id="I251:23447;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-yAfS7l vector" data-id="I251:23447;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-cXFhfB group-1000005725" data-id="251:23448"><img class="rectangle-5402-rAGHxo rectangle-5402" data-id="251:23449" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-11@2x.png" alt="Rectangle 5402"></div></div></div><div class="x13_-canva-Z3wPWm" data-id="251:23450"><div class="content_-fixed" data-id="251:23451"><img class="rectangle-730-WNmmQQ rectangle-730" data-id="251:23452" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-12.svg" alt="Rectangle 730"><div class="group-1000004595-WNmmQQ group-1000004595" data-id="251:23453"><p class="canva-studio-rapid-a-h4xVe2 orbitron-normal-mischka-11px" data-id="251:23454"> CANVA // STUDIO&nbsp;&nbsp;Rapid asset generation and brand synthesis. Deploying high-velocity visual communication across the operational spectrum. Scaling the VZP aesthetic.</p></div><img class="vector-768-WNmmQQ vector-768" data-id="251:23455" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-12.svg" alt="Vector 768"><div class="group-1000005722-WNmmQQ group-1000005722" data-id="251:23456"><div class="frame-1000004611-IilTXH frame-1000004611" data-id="251:23457"><a href="https://www.canva.com/design/DAG8-CuUerM/lAFpx-ls-TuRNXDhCQi9WQ/edit" target="_blank"><div class="categorie-badge-InxzC4 categorie-badge" data-id="251:23458"><div class="frame-39510" data-id="I251:23458;4065:38119"><img class="custome-icon-development-icon-uRdMCu custome-icon-development-icon" data-id="I251:23458;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-6.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23458;4065:38121">CREATE_ASSET</div></div></div></a></div><div class="dots-three-icon-IilTXH dots-three-icon" data-id="251:23461"><img class="vector-PevYOq vector" data-id="I251:23461;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23461;4288:125160"><img class="vector-FX7Lfr vector" data-id="I251:23461;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-a0Q7Ya vector" data-id="I251:23461;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-9rN1xp vector" data-id="I251:23461;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-WNmmQQ group-1000005725" data-id="251:23462"><img class="rectangle-5402-KTfoPm rectangle-5402" data-id="251:23463" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-12@2x.png" alt="Rectangle 5402"></div></div></div><div class="x14_-medium-Z3wPWm" data-id="251:23464"><div class="content_-fixed" data-id="251:23465"><img class="rectangle-730-xbx7T4 rectangle-730" data-id="251:23466" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-13.svg" alt="Rectangle 730"><div class="group-1000004595-xbx7T4 group-1000004595" data-id="251:23467"><p class="medium-voice-strateg-cifvzY orbitron-normal-mischka-11px" data-id="251:23468">MEDIUM // VOICE&nbsp;&nbsp;Strategic content broadcasting. Translating complex system logic into high-impact thought leadership. The primary vector for public-facing discourse.</p></div><img class="vector-768-xbx7T4 vector-768" data-id="251:23469" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-13.svg" alt="Vector 768"><div class="group-1000005722-xbx7T4 group-1000005722" data-id="251:23470"><a href="https://medium.com/@vectorzenith.hq" target="_blank"><div class="frame-1000004611-7PYLfQ frame-1000004611" data-id="251:23471"><div class="categorie-badge" data-id="251:23472"><div class="frame-39510" data-id="I251:23472;4065:38119"><img class="custome-icon-development-icon-xvH7Mo custome-icon-development-icon" data-id="I251:23472;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-6.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23472;4065:38121">PUBLISH</div></div></div></div></a><div class="dots-three-icon-7PYLfQ dots-three-icon" data-id="251:23475"><img class="vector-YTnVJz vector" data-id="I251:23475;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23475;4288:125160"><img class="vector-tU0BH8 vector" data-id="I251:23475;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-omdGZD vector" data-id="I251:23475;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-qGlzCX vector" data-id="I251:23475;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-xbx7T4 group-1000005725" data-id="251:23476"><img class="rectangle-5402-VL8cQa rectangle-5402" data-id="251:23477" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-13@2x.png" alt="Rectangle 5402"></div></div></div><div class="x15_-contra-Z3wPWm" data-id="251:23478"><div class="content_-fixed" data-id="251:23479"><img class="rectangle-730-PHi9Zp rectangle-730" data-id="251:23480" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-14.svg" alt="Rectangle 730"><div class="group-1000004595-PHi9Zp group-1000004595" data-id="251:23481"><p class="contra-professional-jl7THj orbitron-normal-mischka-11px" data-id="251:23482">CONTRA // Professional network synchronization. Showcasing the VZP output to the global market. Managing the professional identity and project ledger.</p></div><img class="vector-768-PHi9Zp vector-768" data-id="251:23483" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-14.svg" alt="Vector 768"><div class="group-1000005722-PHi9Zp group-1000005722" data-id="251:23484"><div class="frame-1000004611-5dJlWH frame-1000004611" data-id="251:23485"><a href="https://contra.com/matthew_j_brancheau_pp8h67ol/work?r=matthew_j_brancheau_pp8h67ol" target="_blank"><div class="categorie-badge-y3gi32 categorie-badge" data-id="251:23486"><div class="frame-39510" data-id="I251:23486;4065:38119"><img class="custome-icon-development-icon-JqPUnM custome-icon-development-icon" data-id="I251:23486;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-7.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23486;4065:38121">PROJECT INTERFACE</div></div></div></a></div><div class="dots-three-icon-5dJlWH dots-three-icon" data-id="251:23489"><img class="vector-LRXsCI vector" data-id="I251:23489;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23489;4288:125160"><img class="vector-zvZuyc vector" data-id="I251:23489;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-KH5ymn vector" data-id="I251:23489;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-50Xtth vector" data-id="I251:23489;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-PHi9Zp group-1000005725" data-id="251:23490"><img class="rectangle-5402-tTfzV8 rectangle-5402" data-id="251:23491" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-14@2x.png" alt="Rectangle 5402"></div></div></div><div class="x16_-eraserio-Z3wPWm" data-id="251:23492"><div class="content_-fixed" data-id="251:23493"><img class="rectangle-730-8EOkH6 rectangle-730" data-id="251:23494" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-730-15.svg" alt="Rectangle 730"><div class="group-1000004595-8EOkH6 group-1000004595" data-id="251:23495"><p class="eraser-logic-archite-eCJd3f orbitron-normal-mischka-11px" data-id="251:23496">ERASER // LOGIC&nbsp;&nbsp;Architectural whiteboarding and schematic drafting. Mapping the initial flow of ideas before they are committed to the stack. The forge of raw logic.</p></div><img class="vector-768-8EOkH6 vector-768" data-id="251:23497" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-768-15.svg" alt="Vector 768"><div class="group-1000005722-8EOkH6 group-1000005722" data-id="251:23498"><a href="https://app.eraser.io/workspace/rjYEU5QRxifumj6mf20u?origin=share" target="_blank"><div class="frame-1000004611-XxckMh frame-1000004611" data-id="251:23499"><div class="categorie-badge" data-id="251:23500"><div class="frame-39510" data-id="I251:23500;4065:38119"><img class="custome-icon-development-icon-Rzbg1x custome-icon-development-icon" data-id="I251:23500;4065:38120" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/custome-icon-development-icon-7.svg" alt="Custome Icon/Development Icon"><div class="development orbitron-medium-mirage-10px" data-id="I251:23500;4065:38121">SKETCH_FLOW</div></div></div></div></a><div class="dots-three-icon-XxckMh dots-three-icon" data-id="251:23503"><img class="vector-6Yl4e2 vector" data-id="I251:23503;4288:125159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector-48@2x.png" alt="Vector"><div class="group-1000005718" data-id="I251:23503;4288:125160"><img class="vector-47N5u0 vector" data-id="I251:23503;4288:125161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-DdNxMT vector" data-id="I251:23503;4288:125162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"><img class="vector-38GkNh vector" data-id="I251:23503;4288:125163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/vector.svg" alt="Vector"></div></div></div><div class="group-1000005725-8EOkH6 group-1000005725" data-id="251:23504"><img class="rectangle-5402-WYa2RO rectangle-5402" data-id="251:23505" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/rectangle-5402-15@2x.png" alt="Rectangle 5402"></div></div></div></div><div class="vzp-logo-TzKz29" data-id="251:23506"><img class="image-1-BjCncZ" data-id="251:23507" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/696944103fb693862450f239/releases/6969a55487c7072bfb11a079/img/image-1.png" alt="image 1"></div><div class="header_-core_-systems-TzKz29" data-id="251:23508"><div class="frame-1000004457-xFOjBZ frame-1000004457" data-id="251:23509"><div class="core-systems-32Tutu orbitron-medium-mischka-20px" data-id="251:23510">CORE SYSTEMS</div></div></div><div class="header_-intell_-layer-TzKz29" data-id="251:23511"><div class="header_-intell_2-yO3a1i" data-id="251:23512"><div class="frame-1000004457-Y3haqJ frame-1000004457" data-id="251:23513"><div class="frame-1000005714-OwSZcU" data-id="251:23514"><div class="intelligence-layer-TqQGnn orbitron-medium-mischka-20px" data-id="251:23515">INTELLIGENCE LAYER</div></div></div></div></div><div class="header_-synth_-deploy-TzKz29" data-id="251:23516"><div class="group-1000005723-olnidt" data-id="251:23517"><div class="frame-1000004457-QO6F5H frame-1000004457" data-id="251:23518"><div class="sysnthesis-deployment-OQjiWy orbitron-medium-mischka-20px" data-id="251:23519">SYSNTHESIS &amp; DEPLOYMENT</div></div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
